@@ -12,6 +12,9 @@ module.exports = (app) => {
   //retrieve a single medicine with id
   router.get("/:id", medicines.findOne);
 
+  // retrieve all medicines with category
+  router.get("/category/:category", medicines.findAllByCategory);
+
   //update a medicine with id
   router.put("/:id", medicines.update);
 
