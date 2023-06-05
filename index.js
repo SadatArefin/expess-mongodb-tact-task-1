@@ -27,14 +27,13 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to CRUD application." });
+  res.json({ message: "Testing Form (Master Details) task by Tactsoft" });
 });
 
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to CRUD application." });
-});
+// routes
 require("./app/routes/purchase.routes")(app);
+require("./app/routes/medicine.routes")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
