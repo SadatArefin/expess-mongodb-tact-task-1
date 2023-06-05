@@ -7,5 +7,6 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.purchases = require("./purchase.model.js")(mongoose);
+db.medicines = require("./medicine.model.js")(mongoose);
 
 module.exports = db;
