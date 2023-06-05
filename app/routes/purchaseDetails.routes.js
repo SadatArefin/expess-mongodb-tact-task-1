@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    const purchaseDetails = require("../controllers/purchaseDetail.controller.js");
+    const purchaseDetails = require("../controllers/purchaseDetails.controller.js");
 
     var router = require("express").Router();
 
@@ -14,7 +14,7 @@ module.exports = (app) => {
 
     // retrieve all purchaseDetails with purchaseId
     router.get("/purchase/:purchaseId", purchaseDetails.findAllByPurchase);
-    
+
     //update a purchaseDetail with id
     router.put("/:id", purchaseDetails.update);
 
